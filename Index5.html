@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRACTISE</title>
+
+    <Script>
+        function add(a ,b){
+            return a+b;
+        }function mul(a,b){
+            return a*b;
+        } 
+       
+
+    </Script>
+
+</head>
+<body>
+    <h2>PRACTICE can make man PERFECT</h2>
+    <h3 id="p">practice</h3>
+    <p id ="a">hai prathap do practice well</p>
+    <label for="name">name</label><br>
+    <input id="name" type="text" placeholder="enter name" value="name"><br>
+    <p id="sub"> press here to submit</p><br>
+    <button onclick="funame()">submit</button> <br><br>
+    
+
+    <script>
+        function funame(value){
+            let a= "your name has more power than you so belive in ur selfs"
+            document.getElementById("sub").innerHTML=a;
+        }
+         let re=add(10,50);
+        document.writeln(re);
+        
+        let res=mul(50,60);
+         document.writeln(res);
+
+         document.getElementById("p").innerText=res
+        // document.getElementById("p").innerText=re
+
+       
+        let x=0;
+        if(x>0){
+            document.writeln(x+"=is possitive num");
+        }else if(x<0){
+            document.write(x+"is negative num");
+        }else{
+            document.write(x+ " neither + or - ve")
+        }
+        document.write("<br>")
+        let a=75;
+        if(a>0){
+            document.write(a+ " is +ve")
+            if(a%2==0)
+            document.write(a + " is even")
+            else 
+            document.write(a +" is odd ");
+            document.write("<br>")
+        }else if (a<0){
+            document.write(a+ " is -ve")
+            if(a%2==0)
+            document.write(a + " is even")}
+            else {
+            document.write(a +" is odd")
+         document.write("<br>")
+        document.write(a+" is niether +ve nor -ve ")}
+
+        document.write("<br>")
+        let sum=0;
+        for(let i=1;i<=10;i++){
+            document.write(i+" ");
+            sum+=i;
+        }document.write("<br>"+"sum is :"+sum)
+
+
+        document.write("<br>")
+
+          let m=1
+         while(m<=10){
+        document.write("Hello"+"<br>"+mul(10,50));
+         m++;
+           }
+           document.write("<br>")
+
+        //    let n=75384;
+        // let count=0;
+        // let add=0;
+        // while(n!=0){
+        //     let last =n%10
+        //     document.write(last);
+        //     add+=last;
+        //     let q=n/10;
+        //     n=Math.floor(q);
+        //     count++;
+        // }
+        // document.write("sum= "+add+"<br>");
+        // document.write("num of digts is "+count);
+        document.write("<br>")
+        function fun(a){
+            document.write(a+"<br>")
+            return "helo +"+a;
+        }
+        fun(10);
+        document.write("<br>")
+        fun();
+
+        function fun1(a=10){
+            document.writeln(a+"<br>")
+            return "helo "+a;
+        }document.write(fun1(100));
+        fun1();// if we are not give the arguments then it takes the parameter value ;
+        
+        document.write("<br>")
+        function fun3(a=1,b=2,c=3){
+            document.writeln("a is"+a);
+            document.writeln("b is"+b);
+            document.writeln("c is"+c);
+
+        }fun3(100,200,300);
+
+        document.write("a is"+a);
+
+        document.write("<br>")
+        function factorial(num=0){
+            let fact=1;
+            while(num>0){
+                fact=fact*num;
+                num--;
+            }document.writeln("foctorial is :"+fact);
+
+        }
+        factorial(5);
+
+        document.write("<br>")
+        let  b=function(c){
+            document.write(c)
+            document.write("<br>")
+            return 100;
+        }
+        document.writeln(b(10));
+        document.write("<br>")
+
+        let y=function(name){
+            return "hello"+name;
+        }
+        document.write( y("prathp"));
+
+        let fm=function(){
+        return "practice like a hell ";
+       }
+
+        document.write("<br>")
+       document.getElementById('a').innerHTML=fm()
+
+      
+       document.write("<br>")
+       let myarrow =()=>{ document.write("arrow fun is executed")};
+       myarrow();
+
+       document.write("<br>")
+       let arro =(a)=>{ document.write("arro fun is executed")};
+       arro(10);
+       document.write("<br>")
+       arro();
+
+       let arrow =a=>{ document.write(a+"arro fun is executed")};
+       arrow(100)
+       document.write("<br>")
+       let arr=(a,b)=>{return a+b};
+       document.write(arr(100,200));
+
+       document.write("<br>")
+       let arrr=(a,b)=>a+b;
+       document.write(arrr(120,520))
+
+       document.write("<br>")
+
+       let exp=3,base=2,ress=1;
+       for(let i=1;i<=exp;i++){
+        ress=ress*base;
+       }
+       document.write(ress+"<br>")
+
+
+        document.write("<br>")
+        function power (base=1,exp=1){
+            let power =1;
+            for(let i=1;i<=exp;i++){
+                power =power*base;
+            }
+            return power;
+        }
+        document.write(power (2,3));
+         
+      
+
+    </script>
+   
+    
+</body>
+</html>

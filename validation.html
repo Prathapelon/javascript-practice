@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>form{
+        background-color: greenyellow;
+        height: 300px;
+        width: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction:column;
+    }
+    input{
+        padding: 10px;
+        margin: 5px;
+        outline: none;
+
+    }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><form action=""onsubmit="validation(event)"><div>
+    <input type="text" placeholder="user name"> <br>
+    <small>feild is mandatory</small>
+
+</div>
+<div><input type="password" placeholder="password"><br>
+    <small>field is mandatory</small>
+
+</div>
+<div>
+    <button type="submit">submit</button>
+</div></form>
+<script>
+let Inputs=document.getElementsByTagName("input")
+let masseges=document.getElementsByTagName("small")
+console.log(inputs);
+console.log(massage);
+function validation(){
+    let fullname=inputs[0].value
+    let password=inputs[1].value
+
+    let fname_name_massage=messages[0]
+    let pwd_error_message=messages[1];
+
+  //  console.log[fullname,fname_name_massage];
+}
+if(fullname===""){
+    fname_name_massage.stye.cssText="display.block;color red"
+    pwd_error_message.stye.cssText="display:block;color:red"
+    return false;
+
+}else{
+    fullname="";
+}
+event.preventDefaultd();
+</script>
+    
+</body>
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .clock {
+            position: absolute;
+            ba color: rgb(0, 2, 4);
+            left: 200;
+            right: 200;
+            transform: translateX(50%);
+            transform: translateY(10%);
+            letter-spacing: 5px;
+            font-size: 40px;
+            background-color: rgb(201, 26, 26);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <link rel="stylesheet" href="jss.js"> -->
+
+
+    <script src="jss.js"></script>
+    <h1>opt:<span id="otpdisplay"></span></h1>
+    <button onclick="generateotp()">otp</button>
+    <span> this is valid only for 30minutes</span>
+    <h3>
+        <p id="changeH">hello world</p>
+    </h3>
+    <button type="button" onclick="document.getElementById('changeH').innerHTML='learn in kannada'">click here</button>
+
+    <h3 id="hbd">hai am prathap</h3>
+    <button type="button" onclick="document.getElementById('hbd').innerHTML='HAPPAY SPECIAL DAY Prathap'">click to some
+        tinggles</button>
+    <h2>change the attribute values</h2>
+    <img id="bulb" src="" alt="">
+
+    <h3>change the style by html elment </h3>
+    <p id="channel">learn in kannada </p>
+    <button type="button" onclick="document.getElementById('channel').style.fontSize='25px'">click</button>
+
+    <h4>
+        <p id="hide">when u click i will hide</p>
+    </h4>
+    <button type="button" onclick="document.getElementById('hide').style.display='none'">click here to hide</button>
+
+    <h3>show the html elements </h3>
+    <p id="show">i love technology so am here</p>
+
+    <button type="button" onclick="document.getElementById('show').style.display='block'">click here to show html
+        elements</button>
+
+    <h3>voting in indian constituency</h3>
+    <p>enter ur age and click the buttom</p>
+    <label for="age">enter ur age</label><br>
+    <input id="age" >
+    <button onclick="ageFunction()">enter age</button>
+    <p id="bax">checking eligiblity</p>
+
+
+    <h3>String methods</h3>
+    <button onclick="myFunction()">click here</button>
+    <p id="boxx">result of method</p>
+
+    <h3>Swich Statements</h3>
+    <input type="number" name="Time" id="b">
+    <button onclick="muFunction()">click here</button>
+    <p id="biix">am says about switch statement</p>
+
+    <h2>arrays functions</h2>
+    <p id="big">iam about arrays</p>
+
+    <p id="box1">p1</p>
+    <p id="box2">p2</p>
+    <p id="box3">p3</p>
+        <!-- <button id="b" onclick="document.getElementById('b1').innnerHTML=''">click </button> -->
+    <p id="b1">hai</p>
+        <p id="b2">hello</p>
+
+
+    <h2>Digital clock</h2>
+    <p>JS projects to create a clock</p>
+    <div id="myclock" class="clock" onload="showTime()"></div>
+
+    <h2>enter the page</h2>
+    <h4></h4>
+    <p id="sm"></p>
+    </h4>
+
+    <h3>
+        <p id="s">i will show the data </p>
+    </h3>
+    <button onclick="ShowDate()"> click to get Today's date</button>
+<button ondblclick="ShowTime()">Double click to show today's current time</button>
+<br>
+<div>
+    <input type="text" name="name" id="control" onfocus="changebg()" onblur="removebg()">
+</div>
+
+    <br>
+    <Script>
+        '<br>'
+        let MyName = "tom"; '<br>'
+        document.write(MyName);
+        document.write('<br>');
+        document.write(typeof MyName + ' type')
+        let a = String(50);
+        document.write(a);
+        document.write('<br>')
+        document.write(typeof a + ' type')
+        document.write('<br>');
+
+        let arr = [1, 2, 3, 5, 4, 6]
+        document.write(arr);
+        document.write('<br>')
+
+        document.write(typeof arr + 'these type'); document.write('<br>')
+
+        document.write(arr.length)
+        document.write('<br>')
+
+        function ageFunction() {
+            let age, eligible;
+            age = Number(document.getElementById('age').value);
+            if (isNaN(age)) {
+                eligible = "not a number";
+            } else {
+                eligible = (age < 18) ? "too younge not eligible for voting" : "eligible for voting ";
+            } document.getElementById('bax').innerHTML = eligible;
+        }
+        function myFunction() {
+            let str = "java Script cource";
+            let s = str.toLocaleLowerCase();
+            document.getElementById('boxx').innerHTML = s;
+        } 
+        function muFunction() {
+            let time = number(document.getElementById('b').value)
+            switch (time) {
+                case 6: document.write("good morning"); break;
+                case 5: document.write("good Afternoon"); break;
+                default: document.write("have a good day");
+
+
+            }document.getElementById(biix).innerHTML = time;
+
+        
+        } let mobile = ['mi', 'realme', 'oppo'];
+        document.getElementById('big').innerHTML = mobile;
+
+
+        let num1 = [37, 20, 4, 50, 60, 50, 20];
+        let num2= num1.map(MyFuntion);
+        document.getElementById('box1').innerHTML = num2;
+        document.getElementById('box2').innerHTML = num1;
+        document.getElementById('box3').innerHTML = MyFuntion(7);
+
+        function MyFuntion(value) {
+            return value * 2;
+        }
+        class hello {
+            mes() {
+                document.write("helo world")
+                document.write('<br>')
+            } gm() {
+                document.write("good morning")
+            }
+        }
+        let q = new hello();
+    //    document.getElementById('b1').innerHTML(q.mes());
+    //     document.getElementById('b2').innerText(q.gm());
+    //     document.write('<br>')
+
+        
+
+        function showTime() {
+            let date = new Date();
+            let dt = date.getDate()
+            let month = date.getMonth() + 1
+            let yr = date.getFullYear();
+            let hr = date.getHours();
+            let min = date.getMinutes();
+            let sec = date.getSeconds();
+            let secc = date.getMilliseconds();
+            let session = "am";
+
+            if (hr == 0) {
+                hr = 12;
+            } if (hr > 12) {
+                hr = hr - 12;
+                session = "pm";
+            }
+            dt = (dt < 10) ? "0" + dt : dt;
+            month = (month < 10) ? "0" + month : month;
+
+            hr = (hr < 10) ? "0" + hr : hr;
+            min = (min < 10) ? '0' + min : min;
+            sec = (sec < 10) ? "0" + sec : sec;
+
+            let time = dt + ":" + month + ":" + yr + ":" + hr + ":" + min + ":" + sec + ":" + secc + ":" + session;
+            document.getElementById("myclock").innerText = time;
+            document.getElementById("myclock").textContent = time;
+            setTimeout(showTime, 1000)
+        } showTime();
+
+        let p = prompt(("enter ur name"))
+        document.getElementById("sm").innerHTML = ('hello' + p)
+
+        const d = new Date();
+        document.querySelector("#s").innerHTML = d
+
+        var add2nu = (a, b) => {
+            document.write('<br>')
+            document.write(a + b)
+            document.write('<br>')
+            document.write(a * b)
+            return a / b;
+        }
+        function ShowDate(){
+            let date=new Date().toLocaleDateString();
+            document.write("Today's date is "+date )
+
+        }
+        function ShowTime(){
+            let timee =new date().toLocaleTimeString()
+            document.write("todays cureent time is"+timee)
+        }
+        let add = add2nu(10, 20);
+        document.write('<br>')
+        document.write(add);
+        
+        let z=document.getElementById("prathap").
+        document.write(z);
+
+        let b=document.getElementsByClassName('hii')
+        document.write(b);
+
+        let ul=document.createElement("ul")
+        document.write(ul)
+
+        let res=confirm("Accept cookies")
+        d.getElementById('res')
+
+        let string =prompt("enter ur name")
+        function revString(string){
+            return string.split(" ").reverse().join(" ")
+        }let resu=revString(string)
+        document.write(resu)
+
+        function changebg(){
+            control.style.backgroundcolor="green"
+        }
+        function removebg(){
+            control.style.backgroundcolor="blue"
+        }
+        // function changebgcolor(){
+        //     let box=document.querySelector('.bo')bo.style.cssText="bakground-color:yellow"
+        // }
+            
+
+
+    </Script>
+
+</body>
+
+</html>

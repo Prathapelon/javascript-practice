@@ -1,0 +1,105 @@
+Validation code:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        form{
+            background-color:  black;
+            height: 300px;
+            width: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+        }
+
+        input{
+            padding: 10px;
+            margin: 5px;
+            outline: none;
+        }
+
+        small{
+            color: white;
+            font-weight: bold;
+            margin-left: 10px;
+            display: none;
+        }
+
+        button{
+             margin-top: 30px;
+        }
+
+        .fa-eye , .fa-eye-slash{
+            color: black;
+            position: absolute;
+            right: 60px;
+            top: 133px;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="" onsubmit="return Validation(event)">
+        <div>
+            <input type="text" placeholder="fullname.."> <br>
+            <small class="msgs">Field is mandatory*</small>
+        </div>
+        <div>
+            <input type="password" placeholder="password..">
+            <div><i class="fa-solid fa-eye" onclick="showPassword()"></i></div>
+            <br>
+            <small class="msgs">Field is mandatory*</small>
+        </div>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+
+    <script>
+        let inputs = document.getElementsByTagName("input")
+        let messages = document.getElementsByTagName("small")
+       
+        function Validation(event){
+            let fullname = inputs[0].value
+            let password = inputs[1].value
+            let fname_error_message = messages[0]
+            let pwd_error_message = messages[1]
+            
+            if(fullname === "" || password === ""){
+                fname_error_message.style.cssText = "display:block;color:red"
+                pwd_error_message.style.cssText = "display:block;color:red"
+                return false
+            }
+            else{
+                return true
+                fullname = ""
+            }
+
+            // event.preventDefault()
+        }
+
+        function showPassword(){
+            let eye = document.querySelector(".fa-eye")
+            let password_field = inputs[1]
+           
+            if(password_field.type === "password"){
+                password_field.setAttribute("type" , "text")
+                eye.classList.add("fa-eye-slash")
+            }else{
+                password_field.setAttribute("type" , "password")
+                eye.classList.toggle("fa-eye-slash")
+            }
+        } 
+    </script>
+    
+</body>
+</html>

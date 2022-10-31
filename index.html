@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script src="function.js"></script>
+    <script>
+        let promise=new Promise((resolve,rejected)=>{
+            let interviews=false
+            if(interviews){
+                resolved("the students is ver good in nature in technical skills ")
+            }
+            else{
+                rejected("Students is not regular to clases and also not good in tecnical skills")
+            }
+        })
+        //then():resolved promise. catch()-ejecting promise;
+        promise.then((data)=>{
+            console.log(data);
+            console.log("thank  u sir giveing interview ");
+        }).catch((err)=>{
+            console.log(err);
+            console.log("this is not good sir i'll meet u outside");
+        })
+    </script>
+</body>
+</html>
